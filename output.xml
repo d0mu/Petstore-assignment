@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20160411 13:19:59.764" generator="Robot 3.0 (Python 2.7.11 on win32)">
+<suite source="C:\QLEAP WORK\RBC\Petstore - Assignment UI Tests\US0004.robot" id="s1" name="US0004">
+<test id="s1-t1" name="US0004 - Modifying an existing pet - edit name and discard changes using ESC">
+<kw name="Given Petstore app is running">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${SERVER}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20160411 13:19:59.918" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000/'</msg>
+<status status="PASS" endtime="20160411 13:20:01.781" starttime="20160411 13:19:59.918"></status>
+</kw>
+<status status="PASS" endtime="20160411 13:20:01.781" starttime="20160411 13:19:59.918"></status>
+</kw>
+<kw name="When I click on a pet name">
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//span[@class='pet lbl pet-name']</arg>
+</arguments>
+<assign>
+<var>${TEXT}</var>
+</assign>
+<msg timestamp="20160411 13:20:02.139" level="INFO">${TEXT} = Pixie</msg>
+<status status="PASS" endtime="20160411 13:20:02.139" starttime="20160411 13:20:01.781"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//span[@class='pet lbl pet-name']</arg>
+</arguments>
+<msg timestamp="20160411 13:20:02.139" level="INFO">Clicking element 'xpath=//span[@class='pet lbl pet-name']'.</msg>
+<status status="PASS" endtime="20160411 13:20:02.671" starttime="20160411 13:20:02.139"></status>
+</kw>
+<status status="PASS" endtime="20160411 13:20:02.671" starttime="20160411 13:20:01.781"></status>
+</kw>
+<kw name="And I edit the text">
+<kw name="Press Key" library="Selenium2Library">
+<doc>Simulates user pressing key on element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//input[@class='pet usr-input pet-name']</arg>
+<arg>Dixie</arg>
+</arguments>
+<status status="PASS" endtime="20160411 13:20:03.606" starttime="20160411 13:20:02.671"></status>
+</kw>
+<status status="PASS" endtime="20160411 13:20:03.606" starttime="20160411 13:20:02.671"></status>
+</kw>
+<kw name="And I hit the ESC key">
+<kw name="Press Key" library="Selenium2Library">
+<doc>Simulates user pressing key on element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//input[@class='pet usr-input pet-name']</arg>
+<arg>\\27</arg>
+</arguments>
+<status status="PASS" endtime="20160411 13:20:04.333" starttime="20160411 13:20:03.607"></status>
+</kw>
+<status status="PASS" endtime="20160411 13:20:04.333" starttime="20160411 13:20:03.607"></status>
+</kw>
+<kw name="Then the changes are not saved">
+<kw name="Table Column Should Contain" library="Selenium2Library">
+<doc>Verifies that a specific column contains `expected`.</doc>
+<arguments>
+<arg>xpath=//table[@class='table table-hover']</arg>
+<arg>1</arg>
+<arg>${TEXT}</arg>
+</arguments>
+<status status="PASS" endtime="20160411 13:20:04.606" starttime="20160411 13:20:04.333"></status>
+</kw>
+<status status="PASS" endtime="20160411 13:20:04.606" starttime="20160411 13:20:04.333"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20160411 13:20:05.816" starttime="20160411 13:20:04.606"></status>
+</kw>
+<status status="PASS" endtime="20160411 13:20:05.816" critical="yes" starttime="20160411 13:19:59.918"></status>
+</test>
+<test id="s1-t2" name="US0004 - Modifying an existing pet - edit name and save changes using the ENTER">
+<kw name="Given Petstore app is running">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${SERVER}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20160411 13:20:05.816" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000/'</msg>
+<status status="PASS" endtime="20160411 13:20:07.796" starttime="20160411 13:20:05.816"></status>
+</kw>
+<status status="PASS" endtime="20160411 13:20:07.796" starttime="20160411 13:20:05.816"></status>
+</kw>
+<kw name="When I click on a pet name">
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//span[@class='pet lbl pet-name']</arg>
+</arguments>
+<assign>
+<var>${TEXT}</var>
+</assign>
+<msg timestamp="20160411 13:20:08.248" level="INFO">${TEXT} = Pixie</msg>
+<status status="PASS" endtime="20160411 13:20:08.248" starttime="20160411 13:20:07.798"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//span[@class='pet lbl pet-name']</arg>
+</arguments>
+<msg timestamp="20160411 13:20:08.248" level="INFO">Clicking element 'xpath=//span[@class='pet lbl pet-name']'.</msg>
+<status status="PASS" endtime="20160411 13:20:08.889" starttime="20160411 13:20:08.248"></status>
+</kw>
+<status status="PASS" endtime="20160411 13:20:08.889" starttime="20160411 13:20:07.797"></status>
+</kw>
+<kw name="And I edit the text">
+<kw name="Press Key" library="Selenium2Library">
+<doc>Simulates user pressing key on element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//input[@class='pet usr-input pet-name']</arg>
+<arg>Dixie</arg>
+</arguments>
+<status status="PASS" endtime="20160411 13:20:09.496" starttime="20160411 13:20:08.889"></status>
+</kw>
+<status status="PASS" endtime="20160411 13:20:09.496" starttime="20160411 13:20:08.889"></status>
+</kw>
+<kw name="And I hit the ENTER key">
+<kw name="Press Key" library="Selenium2Library">
+<doc>Simulates user pressing key on element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//input[@class='pet usr-input pet-name']</arg>
+<arg>\\13</arg>
+</arguments>
+<status status="PASS" endtime="20160411 13:20:09.974" starttime="20160411 13:20:09.497"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>Pixie</arg>
+</arguments>
+<status status="PASS" endtime="20160411 13:20:10.196" starttime="20160411 13:20:09.974"></status>
+</kw>
+<status status="PASS" endtime="20160411 13:20:10.196" starttime="20160411 13:20:09.497"></status>
+</kw>
+<kw name="Then the changes are saved">
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>SEPARATOR=</arg>
+<arg>${TEXT}</arg>
+<arg>Dixie</arg>
+</arguments>
+<assign>
+<var>${TEXT}</var>
+</assign>
+<msg timestamp="20160411 13:20:10.196" level="INFO">${TEXT} = Dixie</msg>
+<status status="PASS" endtime="20160411 13:20:10.196" starttime="20160411 13:20:10.196"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${TEXT}</arg>
+</arguments>
+<status status="PASS" endtime="20160411 13:20:10.385" starttime="20160411 13:20:10.196"></status>
+</kw>
+<status status="PASS" endtime="20160411 13:20:10.385" starttime="20160411 13:20:10.196"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20160411 13:20:11.585" starttime="20160411 13:20:10.385"></status>
+</kw>
+<status status="PASS" endtime="20160411 13:20:11.585" critical="yes" starttime="20160411 13:20:05.816"></status>
+</test>
+<test id="s1-t3" name="US0004 - Modifying an existing pet - edit name and save changes using the mouse">
+<kw name="Given Petstore app is running">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${SERVER}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20160411 13:20:11.595" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:3000/'</msg>
+<status status="PASS" endtime="20160411 13:20:13.448" starttime="20160411 13:20:11.595"></status>
+</kw>
+<status status="PASS" endtime="20160411 13:20:13.449" starttime="20160411 13:20:11.595"></status>
+</kw>
+<kw name="When I click on a pet name">
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//span[@class='pet lbl pet-name']</arg>
+</arguments>
+<assign>
+<var>${TEXT}</var>
+</assign>
+<msg timestamp="20160411 13:20:13.906" level="INFO">${TEXT} = PixieDixie</msg>
+<status status="PASS" endtime="20160411 13:20:13.906" starttime="20160411 13:20:13.450"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//span[@class='pet lbl pet-name']</arg>
+</arguments>
+<msg timestamp="20160411 13:20:13.906" level="INFO">Clicking element 'xpath=//span[@class='pet lbl pet-name']'.</msg>
+<status status="PASS" endtime="20160411 13:20:14.557" starttime="20160411 13:20:13.906"></status>
+</kw>
+<status status="PASS" endtime="20160411 13:20:14.557" starttime="20160411 13:20:13.450"></status>
+</kw>
+<kw name="And I edit the text">
+<kw name="Press Key" library="Selenium2Library">
+<doc>Simulates user pressing key on element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//input[@class='pet usr-input pet-name']</arg>
+<arg>Dixie</arg>
+</arguments>
+<status status="PASS" endtime="20160411 13:20:15.089" starttime="20160411 13:20:14.568"></status>
+</kw>
+<status status="PASS" endtime="20160411 13:20:15.089" starttime="20160411 13:20:14.567"></status>
+</kw>
+<kw name="And I do mouse out">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=//h1[@class='assignment-title']</arg>
+</arguments>
+<msg timestamp="20160411 13:20:15.091" level="INFO">Clicking element 'xpath=//h1[@class='assignment-title']'.</msg>
+<status status="PASS" endtime="20160411 13:20:15.619" starttime="20160411 13:20:15.090"></status>
+</kw>
+<status status="PASS" endtime="20160411 13:20:15.620" starttime="20160411 13:20:15.090"></status>
+</kw>
+<kw name="Then the changes are saved">
+<kw name="Catenate" library="BuiltIn">
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<arguments>
+<arg>SEPARATOR=</arg>
+<arg>${TEXT}</arg>
+<arg>Dixie</arg>
+</arguments>
+<assign>
+<var>${TEXT}</var>
+</assign>
+<msg timestamp="20160411 13:20:15.622" level="INFO">${TEXT} = Dixie</msg>
+<status status="PASS" endtime="20160411 13:20:15.622" starttime="20160411 13:20:15.621"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<doc>Waits until `text` appears on current page.</doc>
+<arguments>
+<arg>${TEXT}</arg>
+</arguments>
+<status status="PASS" endtime="20160411 13:20:15.832" starttime="20160411 13:20:15.622"></status>
+</kw>
+<status status="PASS" endtime="20160411 13:20:15.832" starttime="20160411 13:20:15.621"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20160411 13:20:17.044" starttime="20160411 13:20:15.832"></status>
+</kw>
+<status status="PASS" endtime="20160411 13:20:17.044" critical="yes" starttime="20160411 13:20:11.585"></status>
+</test>
+<status status="PASS" endtime="20160411 13:20:17.044" starttime="20160411 13:19:59.774"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="3">Critical Tests</stat>
+<stat fail="0" pass="3">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="US0004" pass="3">US0004</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20160411 13:19:59.908" level="ERROR">Error in file 'C:\QLEAP WORK\RBC\Petstore - Assignment UI Tests\US0004.robot': Importing test library 'Catenate' failed: ImportError: No module named Catenate
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Python27\lib\site-packages\setuptools-20.6.7-py2.7.egg
+  C:\Python27\lib\site-packages\robotframework_selenium2library-1.7.4-py2.7.egg
+  C:\Python27\lib\site-packages\docutils-0.12-py2.7.egg
+  C:\Python27\lib\site-packages\selenium-2.53.1-py2.7.egg
+  C:\Python27\lib\site-packages\decorator-4.0.9-py2.7.egg
+  C:\Windows\system32\python27.zip
+  C:\Python27\DLLs
+  C:\Python27\lib
+  C:\Python27\lib\plat-win
+  C:\Python27\lib\lib-tk
+  C:\Python27
+  C:\Python27\lib\site-packages</msg>
+</errors>
+</robot>
